@@ -27,3 +27,11 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     
+    vsts package universal publish 
+    --instance "https://dev.azure.com/abcsa/" 
+    --feed "CIFeed" 
+    --name "my-package-name" 
+    --version "12.2.0" 
+    --description "My description" 
+    --path .
+    
