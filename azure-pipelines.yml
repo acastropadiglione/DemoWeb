@@ -24,7 +24,7 @@ steps:
   inputs:
     targetType: filePath
     filePath: 'build.ps1'
-    arguments: '-DestinationDir $(Build.ArtifactStagingDirectory)'
+    arguments: '$(Build.ArtifactStagingDirectory)'
 
 - task: VSBuild@1
   inputs:
