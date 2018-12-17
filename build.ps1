@@ -1,5 +1,5 @@
 $_version = 2.0
-$_psdir = (get-item $DestinationDir)
+$_psdir = (get-item  $Args[0])
 $_contentdir = "$_psdir\content"
 $_pfdir = (${env:ProgramFiles(x86)}, ${env:ProgramFiles} -ne $null)[0]
 $_vs="vs_buildtools.exe --add Microsoft.VisualStudio.Workload.WebBuildTools"
