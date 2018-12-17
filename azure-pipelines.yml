@@ -24,7 +24,7 @@ steps:
   inputs:
     targetType: filePath
     filePath: 'build.ps1'
-    arguments: '-Configuration $(BuildConfiguration) -DestinationDir $(Build.ArtifactStagingDirectory) -StandardZipFormat $false -SkipZip $false -SkipConfigRename $false -compressionLevel 5'
+    arguments: '-DestinationDir $(Build.ArtifactStagingDirectory)'
 
 - task: VSBuild@1
   inputs:
