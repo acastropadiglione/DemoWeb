@@ -23,9 +23,9 @@ git clone --progress --branch 'master' 'https://github.com/acastropadiglione/Dem
     Foreach-Object {$_ -replace $assemblyinfoversion, $_version}  | 
     Out-File $_assemblyinfo
 #endregion
+<#
 $_version = $_version -replace '\.', '_'
 #region Projects Builds (Debug Any CPU)
-#
     Write-Host "`tBuilding Debug Any CPU version..." 
     $global:LASTEXITCODE = 0
     $options = @((join-path $_contentdir 'WebAppBatata.sln'), '/m', '/p:Configuration=Debug', '/p:Platform=Any CPU')    
@@ -35,7 +35,6 @@ $_version = $_version -replace '\.', '_'
     if ($LASTEXITCODE -ne 0) {
         throw "Debug project build failed!"
     }
-#
 #endregion
 #region Publish
     Write-Host "`tPublishing (Debug Any CPU)..."
@@ -49,3 +48,4 @@ $_version = $_version -replace '\.', '_'
         throw "Publish failed!"
     }
 #endregion
+#>
