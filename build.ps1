@@ -17,7 +17,7 @@ git clone --progress --branch 'master' 'https://github.com/acastropadiglione/Dem
 #region AssemblyInfo.cs
     Write-Host "`tReplacing version in Assembly Information..." 
     $_assemblyinfo = "$_contentdir\WebAppBatata\Properties\AssemblyInfo.cs"
-    $codeversion = Get-Content $_assemblyinfo | Select-String “assembly: AssemblyVersion”    
+    $codeversion = Get-Content $_assemblyinfo | Select-String "assembly: AssemblyVersion"    
     $assemblyinfoversion = $codeversion -replace '\[assembly: AssemblyVersion\(\"','' -replace '\"\)\]','' -replace '\*', '\*'      
     (Get-Content $_assemblyInfo) | 
     Foreach-Object {$_ -replace $assemblyinfoversion, $_version}  | 
