@@ -31,7 +31,7 @@ steps:
   displayName: 'AzureBlob File Copy'
   inputs:
     SourcePath: '$(build.artifactstagingdirectory)\\'
-      azureSubscription: 'Free Trial (53d5f63e-a470-430b-8c2e-a1def7c54e35)'
+    #azureSubscription: 'Free Trial (53d5f63e-a470-430b-8c2e-a1def7c54e35)'
     Destination: AzureBlob
-    storage: abcsablob
-    ContainerName: abcsacontainer
+    #storage: abcsablob
+    #ContainerName: abcsacontainer
