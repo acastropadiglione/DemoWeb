@@ -44,5 +44,5 @@ steps:
   displayName: 'Post to Slack '
   inputs:
     UserName: 'Robot CID'
-    ApiToken: 'xoxp-4612275360-46840190241-509093184855-3284e56020038531a070f2e040f235bf'
+    ApiToken: 'xoxp-4612275360-46840190241-508068211842-d3f2f21afd7d06113301c6aa01f7c1ba'
     Channel: 'v3-monitoring'    
